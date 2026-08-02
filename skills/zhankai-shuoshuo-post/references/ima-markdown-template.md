@@ -1,6 +1,6 @@
 # IMA 笔记 Markdown 模板（references/ima-markdown-template.md）
 
-> 步骤 6 上传 IMA 笔记时使用。将 pending_zhankai.json 的 48 个字段按以下格式填入。
+> 步骤 6 上传 IMA 笔记时使用。将 pending_zhankai.json 的 50 个字段按以下格式填入。
 > H1 标题为笔记标题（含时间戳），其余按段位顺序排列。
 
 ````markdown
@@ -86,4 +86,10 @@
 {summary_exclude}
 
 {summary_eight}
+
+## 互动钩子
+{cta_hook}
+
+## 话题标签
+{hashtags}
 ````
