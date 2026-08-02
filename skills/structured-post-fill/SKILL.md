@@ -185,7 +185,7 @@ pip install python-docx
 - 总字数仍在 800-900 之间
 - 读起来像人话（"打分"参考 humanizer-zh 自带的 50 分制，目标 ≥40）
 
-详细规则参见 humanizer-zh skill 的 SKILL.md（路径：`c:\Users\keira\.trae-cn\skills\humanizer-zh\SKILL.md`，已安装）。
+详细规则参见 humanizer-zh skill 的 SKILL.md（路径：`humanizer-zh skill`，已安装）。
 
 **优先路径**：直接触发 humanizer-zh skill 对 8 个答题字段逐个/合并重写。
 
@@ -306,7 +306,7 @@ python scripts/fill_structured_post.py
 4. 写临时 Markdown 文件到工作区临时目录，然后调用本 skill 的 IMA 上传脚本（避免 PowerShell 引号问题）：
 
 ```bash
-node c:\Users\keira\.trae-cn\skills\structured-post-fill\scripts\upload_to_ima.js "<临时md文件路径>" "<笔记标题>"
+node <skill目录>/scripts/upload_to_ima.js "<临时md文件路径>" "<笔记标题>"
 ```
 
 **IMA 上传失败重试**：如果 `upload_to_ima.js` 返回 `⚠️ IMA上传失败`，检查 `ima_api.cjs` 是否存在 + IMA 登录状态。重试 1 次；仍失败则跳过上传，本地已跑完脚本不受影响，在报告中标注"IMA 未同步"。

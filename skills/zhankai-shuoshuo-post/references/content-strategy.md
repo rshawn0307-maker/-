@@ -90,7 +90,7 @@
 
 ## 去 AI 化红线
 
-**流程**：生成草稿 -> 调 `c:\Users\keira\.trae-cn\skills\humanizer-zh\SKILL.md` 的 24 个模式自查 -> 改写问题片段 -> 入 JSON。
+**流程**：生成草稿 -> 调 `humanizer-zh skill` 的 24 个模式自查 -> 改写问题片段 -> 入 JSON。
 
 **绝对禁止的 AI 模式**（节选自 humanizer-zh，公考面试语境下的高危版）：
 

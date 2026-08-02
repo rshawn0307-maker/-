@@ -1,4 +1,4 @@
-﻿---
+---
 name: gongkao-interview-question
 description: |
   为公考面试结构化题库批量生成 Obsidian md 文件。每道题含 frontmatter 元信息 + 题干 + 思路大纲 + 800-1000字逐字稿，
@@ -138,10 +138,10 @@ AI工作区/                              <- 知识库根目录
 
 ```bash
 # 单个文件验证：
-python c:\Users\keira\.trae-cn\skills\gongkao-interview-question\scripts\validate_question.py "<md文件路径>"
+python <skill目录>/scripts/validate_question.py "<md文件路径>"
 
 # 批量验证：
-python c:\Users\keira\.trae-cn\skills\gongkao-interview-question\scripts\validate_question.py 综合分析_*.md
+python <skill目录>/scripts/validate_question.py 综合分析_*.md
 ```
 
 目标：800-1000字（含标点，允许轻微溢出100字）。
@@ -169,7 +169,7 @@ python c:\Users\keira\.trae-cn\skills\gongkao-interview-question\scripts\validat
 命名 `题型_编号_主题.md`，按上方「输出目录」章节确定路径并写入。写入后用脚本做最终验证：
 
 ```bash
-python c:\Users\keira\.trae-cn\skills\gongkao-interview-question\scripts\validate_question.py "<刚写入的md文件路径>"
+python <skill目录>/scripts/validate_question.py "<刚写入的md文件路径>"
 ```
 
 ### 步骤5.5：上传 IMA 笔记
@@ -182,7 +182,7 @@ python c:\Users\keira\.trae-cn\skills\gongkao-interview-question\scripts\validat
 3. 调用本 skill 的 IMA 上传脚本：
 
 ```bash
-node c:\Users\keira\.trae-cn\skills\gongkao-interview-question\scripts\upload_to_ima.js "<md文件路径>" "<笔记标题>"
+node <skill目录>/scripts/upload_to_ima.js "<md文件路径>" "<笔记标题>"
 ```
 
 **注意**：本地 md 文件保持原名（不含时间戳），仅在 IMA 笔记标题中加时间戳。上传失败不阻断主流程，在报告中标注即可。
@@ -200,7 +200,7 @@ c. 呈现6道样例给用户审阅
 🔴 **CHECKPOINT · 🛑 STOP：必须等用户明确确认"风格 OK / 可以批量"后，才继续下方 d-f。用户未确认前禁止批量生产。**
 
 d. 用户确认后批量生产剩余题目
-e. 批量生产时每批用脚本批量验证：`python c:\Users\keira\.trae-cn\skills\gongkao-interview-question\scripts\validate_question.py 综合分析_*.md`
+e. 批量生产时每批用脚本批量验证：`python <skill目录>/scripts/validate_question.py 综合分析_*.md`
 f. 每批验证不通过的文件单独修正后重跑，不要混入下一批
 
 ## 内容风格铁律（6条不可妥协）
