@@ -69,7 +69,7 @@ GATE 4 [UPLOAD EXIT]
 ```bash
 # ── Step 1: preflight-check.cjs ← ⛔ GATE 1 ──
 # 有扩展名时自动推断；无扩展名时需传 --content-type
-PREFLIGHT=$(node <ima 目录>/knowledge-base/scripts/preflight-check.cjs \
+PREFLIGHT=$(node <ima-skill 目录>/knowledge-base/scripts/preflight-check.cjs \
   --file "/path/to/report.pdf")
 echo "$PREFLIGHT"
 # pass=false → 终止，将 reason 展示给用户。NEVER ask "want to try?"
@@ -103,7 +103,7 @@ CREATE_MEDIA_RESP=$(ima_api "openapi/wiki/v1/create_media" "{
 
 # ── Step 5: cos-upload.cjs ← ⛔ GATE 5 (non-zero = STOP) ──
 # ⚠️ Large files may exceed default 120s timeout — set --timeout explicitly.
-node <ima 目录>/knowledge-base/scripts/cos-upload.cjs \
+node <ima-skill 目录>/knowledge-base/scripts/cos-upload.cjs \
   --file "/path/to/report.pdf" \
   --secret-id "<cos_credential.secret_id>" \
   --secret-key "<cos_credential.secret_key>" \
@@ -201,7 +201,7 @@ TEMP_DIR=$(mktemp -d)
 curl -sL -o "$TEMP_DIR/paper.pdf" "<url>"
 
 # 3. preflight-check.cjs ← ⛔ GATE 1
-PREFLIGHT=$(node <ima 目录>/knowledge-base/scripts/preflight-check.cjs \
+PREFLIGHT=$(node <ima-skill 目录>/knowledge-base/scripts/preflight-check.cjs \
   --file "$TEMP_DIR/paper.pdf" --content-type "$CONTENT_TYPE")
 # pass=false → terminate
 

@@ -9,7 +9,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 | [gongkao](#gongkao) | 公考面试结构化讲义全产品工具（6 个工作流） | [查看](#gongkao) |
 | [leader](#leader) | 把一句话想法拆成 AI agent 能独立跑完的目标任务书 | [查看](#leader) |
 | [human-writing](#human-writing) | 通用中文创作与改稿，去 AI 味儿 | [查看](#human-writing) |
-| [ima](#ima) | 统一的 IMA 笔记与知识库操作技能 | [查看](#ima) |
+| [ima-skill](#ima-skill) | 统一的 IMA 笔记与知识库操作技能 | [查看](#ima-skill) |
 | [pe-lecture](#pe-lecture) | 教师编笔试"举一反三"讲稿生成与反例沉淀 | [查看](#pe-lecture) |
 | [pe-trial](#pe-trial) | 体育试讲稿教学产物全流程生成 | [查看](#pe-trial) |
 | [structured-post](#structured-post) | "结构化每日一练"帖子 docx 自动生成 | [查看](#structured-post) |
@@ -39,7 +39,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 复制 `SKILL.md` 的内容作为项目规则文件（如 `CLAUDE.md` / `AGENTS.md`）的参考，或直接粘贴给 Agent 作为系统提示词。
 
-> 提示：少数 skill 依赖同仓库的兄弟 skill（例如 structured-post、zhankai 依赖 human-writing，ima 供多个 skill 调用），建议一起安装到同一个 skills 根目录。
+> 提示：少数 skill 依赖同仓库的兄弟 skill（例如 structured-post、zhankai 依赖 human-writing，ima-skill 供多个 skill 调用），建议一起安装到同一个 skills 根目录。
 
 ## Skill 详解
 
@@ -59,7 +59,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 通用中文创作与改稿 Skill。用于知乎回答、公众号文章、博客、评论、人物故事、历史叙事、教程、评测、小说、口播和演讲稿等，默认写成一个见过事、查过材料、愿意把来龙去脉讲清楚的人在说话，保留中文互联网长文的活人感和自然韵律。成稿正文严禁冒号、破折号、"不是……而是……"及同类翻案句，并清除商业黑话和模型惯用黑话。
 
-### ima
+### ima-skill
 
 统一的 IMA OpenAPI 技能，支持笔记管理和知识库操作：搜索/浏览/创建/追加笔记，上传文件、添加网页到知识库、知识库内容搜索与原文获取。需要自行配置 IMA OpenAPI 凭证（`IMA_OPENAPI_CLIENTID` / `IMA_OPENAPI_APIKEY` 或 `~/.config/ima/`）。
 
