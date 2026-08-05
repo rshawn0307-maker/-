@@ -176,7 +176,7 @@ pip install python-docx
 重点扫：
 - "标志着""彰显了""体现了""不断演变的"等 AI 标志性短语
 - 三段式列举（"无缝、直观、强大"）→ 改两项或四项
-- 破折号清零（"——"一律改逗号或句号，human-writing 1.1 硬禁令）
+- 破折号清零（"——"一律改逗号或句号，human-writing 硬禁令）
 - 中文/英文冒号清零（网址、代码与机器字段除外）
 - 模糊归因（"专家认为""业内人士表示"）
 - 否定式排比与变形（"这不仅仅是……而是……""不只……还……""表面……实际……"）
@@ -184,7 +184,7 @@ pip install python-docx
 
 **写完 human-writing 版后自检**：
 - 总字数仍在 800-900 之间
-- 读起来像人话（用 human-writing 的 scripts/check_prose.py 检查，同仓库安装时位于 `../human-writing/scripts/check_prose.py`；human-writing 1.1.0 起冒号/破折号/翻案腔为硬禁令，全部清零）
+- 读起来像人话（用 human-writing 的 scripts/check_prose.py 检查，同仓库安装时位于 `../human-writing/scripts/check_prose.py`；冒号/破折号/翻案腔按 human-writing 最新版硬禁令，全部清零）
 
 详细规则参见 human-writing skill 的 SKILL.md（同仓库安装时位于 `../human-writing/SKILL.md`；若在其他位置则以实际安装路径为准）。
 

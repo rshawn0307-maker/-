@@ -28,7 +28,7 @@ clone_repo() {
   dir="$TMP_DIR/repo_$key"
   if [ ! -d "$dir/.git" ]; then
     echo "==> 拉取 $repo" >&2
-    if ! git clone --depth 1 "$repo" "$dir" >/dev/null 2>&1; then
+    if ! git -c http.version=HTTP/1.1 -c http.connectTimeout=30 -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=30 clone --depth 1 "$repo" "$dir" >/dev/null 2>&1; then
       echo "❌ 拉取失败：$repo"
       exit 1
     fi
@@ -81,11 +81,29 @@ for entry in "${SOURCES[@]}"; do
 done
 
 echo
+echo "==> 校验依赖 human-writing 的 skill："
+HUMAN_WRITING_VERSION="$(cat "$REPO_ROOT/skills/human-writing/VERSION" 2>/dev/null || echo '?')"
+DEPENDENTS=(gongkao structured-post zhankai)
+for s in "${DEPENDENTS[@]}"; do
+  f="$REPO_ROOT/skills/$s/SKILL.md"
+  missing=""
+  grep -q "human-writing" "$f" || missing="$missing human-writing引用"
+  grep -q "破折号" "$f" || missing="$missing 破折号规则"
+  grep -q "冒号" "$f" || missing="$missing 冒号规则"
+  grep -q "翻案" "$f" || missing="$missing 翻案腔规则"
+  if [ -z "$missing" ]; then
+    echo "✅ $s 已对齐 human-writing $HUMAN_WRITING_VERSION（引用与硬禁令要点齐全）"
+  else
+    echo "⚠️  $s 缺少：$missing（human-writing 当前版本 $HUMAN_WRITING_VERSION，请人工检查）"
+  fi
+done
+
+echo
 echo "==> 变更摘要："
-git -C "$REPO_ROOT" status --short -- skills/neat-freak skills/storage-analyzer skills/leader skills/human-writing
+git -C "$REPO_ROOT" status --short -- skills/neat-freak skills/storage-analyzer skills/leader skills/human-writing skills/gongkao skills/structured-post skills/zhankai
 
 if [ "${1:-}" = "--push" ]; then
-  git -C "$REPO_ROOT" add skills/neat-freak skills/storage-analyzer skills/leader skills/human-writing
+  git -C "$REPO_ROOT" add skills/neat-freak skills/storage-analyzer skills/leader skills/human-writing skills/gongkao skills/structured-post skills/zhankai
   if git -C "$REPO_ROOT" diff --cached --quiet; then
     echo "（无变更可提交）"
   else

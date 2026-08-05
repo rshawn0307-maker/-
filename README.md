@@ -126,6 +126,8 @@ bash scripts/sync-khazix.sh --push # 更新并自动 commit + push
 
 脚本会从 khazix-skills 拉取最新代码、覆盖对应 skill 目录，并自动保留/补回 `SKILL.md` 顶部的来源声明和 `ORIGIN.md`。若某个 skill 在上游已改名或删除，脚本会跳过并提示。
 
+`gongkao`、`structured-post`、`zhankai` 三个 skill 的工作流依赖 human-writing，其规则引用一律以 human-writing 最新版为准（不锁版本号）。human-writing 更新后运行同步脚本，脚本会自动校验这三个 skill 的引用与硬禁令要点（冒号/破折号/翻案腔）是否齐全，缺失会明确提示。
+
 ## 许可
 
 本仓库为个人作品，供学习交流使用。部分 skill 内容涉及具体业务场景与个人工作流，请按需修改后使用。
