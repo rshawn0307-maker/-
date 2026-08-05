@@ -59,17 +59,23 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 > 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
 
+> 同步：上游更新后可运行 `bash scripts/sync-khazix.sh` 一键拉取最新版（见下方「同步 khazix 来源 skill」）。
+
 ### neat-freak
 
 知识收尾与治理：核对项目文档、规则文件（CLAUDE.md/AGENTS.md）、获准维护的记忆和工作区残留与代码、真实运行态是否一致，让下一次会话或接手的人从唯一现役答案开始。触发词：洁癖、/neat、把文档和记忆整理一下、收尾时把文档同步掉。
 
 > 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
 
+> 同步：上游更新后可运行 `bash scripts/sync-khazix.sh` 一键拉取最新版（见下方「同步 khazix 来源 skill」）。
+
 ### human-writing
 
 通用中文创作与改稿 Skill。用于知乎回答、公众号文章、博客、评论、人物故事、历史叙事、教程、评测、小说、口播和演讲稿等，默认写成一个见过事、查过材料、愿意把来龙去脉讲清楚的人在说话，保留中文互联网长文的活人感和自然韵律。成稿正文严禁冒号、破折号、"不是……而是……"及同类翻案句，并清除商业黑话和模型惯用黑话。
 
 > 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
+
+> 同步：上游更新后可运行 `bash scripts/sync-khazix.sh` 一键拉取最新版（见下方「同步 khazix 来源 skill」）。
 
 ### ima-skill
 
@@ -95,6 +101,8 @@ macOS / Windows 只读存储分析助手：扫描整机磁盘占用，把占用�
 
 > 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
 
+> 同步：上游更新后可运行 `bash scripts/sync-khazix.sh` 一键拉取最新版（见下方「同步 khazix 来源 skill」）。
+
 ### structured-post
 
 自动化生成"结构化每日一练"小红书/公众号帖子 docx。基于固定 docx 模板 + python-docx 脚本，自动替换题目文本框、正文段落、分页符并保留配图/引流段样式，答题须经 human-writing 去 AI 味儿。
@@ -106,6 +114,17 @@ macOS / Windows 只读存储分析助手：扫描整机磁盘占用，把占用�
 自动化生成"考官想听的·展开说说"系列小红书长帖 docx。站在公务员结构化面试考官视角剖析答题思路，按小红书节奏打磨（标题钩子/短句/emoji/互动钩子/话题标签），基于固定 docx 模板（48 段 + 1 表格）自动替换内容。
 
 触发词：展开说说、做一篇考官想听的、出一期长帖、跑第 N 期。
+
+## 同步 khazix 来源 skill
+
+仓库里的 `neat-freak`、`storage-analyzer`、`leader`、`human-writing` 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)，每个目录内都有 `ORIGIN.md` 注明出处。上游更新后，一条命令即可同步最新版：
+
+```bash
+bash scripts/sync-khazix.sh        # 只更新文件并打印变更
+bash scripts/sync-khazix.sh --push # 更新并自动 commit + push
+```
+
+脚本会从 khazix-skills 拉取最新代码、覆盖对应 skill 目录，并自动保留/补回 `SKILL.md` 顶部的来源声明和 `ORIGIN.md`。若某个 skill 在上游已改名或删除，脚本会跳过并提示。
 
 ## 许可
 

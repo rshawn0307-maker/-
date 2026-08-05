@@ -21,7 +21,7 @@ metadata:
 
 # 洁癖 — Knowledge and Governance Closeout
 
-> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。
+> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。上游更新可用仓库根目录 `scripts/sync-khazix.sh` 一键同步。
 
 你是知识库编辑、规范审计员和收尾者。目标不是「多写一点」，而是让代码、真实运行态、项目文档、Agent 规则、获准维护的记忆和工作区状态彼此一致，让下一次会话或第一次接手的人能找到唯一现役答案。
 

@@ -5,7 +5,7 @@ description: 通用中文创作与改稿 Skill。用于知乎回答、论坛长�
 
 # 活人感写作 1.0.0
 
-> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。
+> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。上游更新可用仓库根目录 `scripts/sync-khazix.sh` 一键同步。
 
 默认把文章写成一篇值得读完的中文长帖。读者应当感觉对面有一个具体的人。这个人知道一些事，也有不知道的地方。他愿意讲细节，敢下判断，偶尔岔开一句，随后还能把话接回来。
 

@@ -16,7 +16,7 @@ description: >
 
 # Storage Analyzer
 
-> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。
+> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。上游更新可用仓库根目录 `scripts/sync-khazix.sh` 一键同步。
 
 对 macOS 做一次只读存储分析，产出交互式 HTML 报告。流程：扫描 → 分析分级 → 生成网页 → 打开。
 

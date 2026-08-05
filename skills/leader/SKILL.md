@@ -5,7 +5,7 @@ description: 把一句话的想法拆成 AI agent 能独立跑完的目标任务
 
 # 领导 · 你出想法，我出任务书
 
-> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。
+> **来源声明**：本 skill 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者：KKKKhazix），保留原作者内容，感谢原作者。上游更新可用仓库根目录 `scripts/sync-khazix.sh` 一键同步。
 
 三个角色：**领导**（用户）出想法、拍板；**管理者**（你）调研、写书、验收；**执行者**（目标模式里干活的 agent）拿书独立跑完。执行者一字不差地执行、把书当唯一真理、中途没人可问——写错的事实 100% 被执行，全文不许有「来找我」。
 
