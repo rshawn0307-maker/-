@@ -8,10 +8,12 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 | --- | --- | --- |
 | [gongkao](#gongkao) | 公考面试结构化讲义全产品工具（6 个工作流） | [查看](#gongkao) |
 | [leader](#leader) | 把一句话想法拆成 AI agent 能独立跑完的目标任务书 | [查看](#leader) |
+| [neat-freak](#neat-freak) | 项目知识收尾：让文档、规则、记忆与代码现状一致 | [查看](#neat-freak) |
 | [human-writing](#human-writing) | 通用中文创作与改稿，去 AI 味儿 | [查看](#human-writing) |
 | [ima-skill](#ima-skill) | 统一的 IMA 笔记与知识库操作技能 | [查看](#ima-skill) |
 | [pe-lecture](#pe-lecture) | 教师编笔试"举一反三"讲稿生成与反例沉淀 | [查看](#pe-lecture) |
 | [pe-trial](#pe-trial) | 体育试讲稿教学产物全流程生成 | [查看](#pe-trial) |
+| [storage-analyzer](#storage-analyzer) | macOS / Windows 只读存储分析与交互式清理报告 | [查看](#storage-analyzer) |
 | [structured-post](#structured-post) | "结构化每日一练"帖子 docx 自动生成 | [查看](#structured-post) |
 | [zhankai](#zhankai) | "展开说说"系列小红书长帖 docx 自动生成 | [查看](#zhankai) |
 
@@ -55,9 +57,19 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 触发词：帮我给 agent 写个目标、详细拆一下这个目标、写个任务书/brief、写个 goal 提示词、把活分给几个 agent 并行。
 
+> 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
+
+### neat-freak
+
+知识收尾与治理：核对项目文档、规则文件（CLAUDE.md/AGENTS.md）、获准维护的记忆和工作区残留与代码、真实运行态是否一致，让下一次会话或接手的人从唯一现役答案开始。触发词：洁癖、/neat、把文档和记忆整理一下、收尾时把文档同步掉。
+
+> 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
+
 ### human-writing
 
 通用中文创作与改稿 Skill。用于知乎回答、公众号文章、博客、评论、人物故事、历史叙事、教程、评测、小说、口播和演讲稿等，默认写成一个见过事、查过材料、愿意把来龙去脉讲清楚的人在说话，保留中文互联网长文的活人感和自然韵律。成稿正文严禁冒号、破折号、"不是……而是……"及同类翻案句，并清除商业黑话和模型惯用黑话。
+
+> 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
 
 ### ima-skill
 
@@ -76,6 +88,12 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 生成体育试讲稿教学产物（教学设计/试讲稿/队形图/自检表），含初始化、子技术识别、并行生产、六维度横评、问题修复、备考讲义生成全流程，支持基于教材批量开发新运动项目。
 
 > 注意：`generate_lecture.py` 顶部的 `BASE_DIR` / `OUTPUT_PATH` 使用 `<项目根>` 占位符，运行前请替换为实际路径。
+
+### storage-analyzer
+
+macOS / Windows 只读存储分析助手：扫描整机磁盘占用，把占用大户分为 🟢 可自动清理 / 🟡 需人工判断 / 🔴 谨慎清理 三级，生成可折叠、命令可一键复制的交互式 HTML 报告，并支持在网页上安全清理（移废纸篓/直接删）。扫描全程只读，删除命令仅展示不代跑。
+
+> 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
 
 ### structured-post
 
