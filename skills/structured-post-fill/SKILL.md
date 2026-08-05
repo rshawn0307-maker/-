@@ -1,6 +1,6 @@
 ---
 name: structured-post-fill
-description: 自动化生成"结构化每日一练"小红书/公众号帖子 docx。基于固定 docx 模板 + python-docx 脚本，自动替换题目文本框、正文段落、分页符，并保留配图/引流段样式。出题 + 答题 + 套版式一气呵成，答题须经 humanizer-zh 去 AI 味儿。触发词：答一道、出题、做一篇结构化帖子、每日一练。
+description: 自动化生成"结构化每日一练"小红书/公众号帖子 docx。基于固定 docx 模板 + python-docx 脚本，自动替换题目文本框、正文段落、分页符，并保留配图/引流段样式。出题 + 答题 + 套版式一气呵成，答题须经 human-writing 去 AI 味儿。触发词：答一道、出题、做一篇结构化帖子、每日一练。
 author: Shawn × AI（2026-06 沉淀）
 version: 1.3.1
 metadata:
@@ -16,7 +16,7 @@ metadata:
   prerequisites:
     - python-docx
     - openpyxl 可选
-    - humanizer-zh（去 AI 味儿）
+    - human-writing（去 AI 味儿）
 install_method: upload
 ---
 
@@ -164,13 +164,13 @@ pip install python-docx
 
 **自检**：写完最后一遍**"考官读出来不得罪人"**——能过即可继续；任何一句读出来让考官皱眉或"笑场"，重写。
 
-### 步骤 2.5：去 AI 味儿（必跑，套用 humanizer-zh）
+### 步骤 2.5：去 AI 味儿（必跑，套用 human-writing）
 
-**写完初稿 → 必跑 humanizer-zh → 才能进 pending_answer.json**。这是硬步骤。
+**写完初稿 → 必跑 human-writing → 才能进 pending_answer.json**。这是硬步骤。
 
 操作：
 `
-触发 humanizer-zh skill，对 8 个答题字段逐个 / 合并重写
+触发 human-writing skill，对 8 个答题字段逐个 / 合并重写
 `
 
 重点扫：
@@ -181,13 +181,13 @@ pip install python-docx
 - 否定式排比（"这不仅仅是……而是……"）
 - "总之，…"如果也是 AI 味儿的万能收束，**重写一个**（比如"说到底"、具体行动、不需要"总之"开头）
 
-**写完 humanizer-zh 版后自检**：
+**写完 human-writing 版后自检**：
 - 总字数仍在 800-900 之间
-- 读起来像人话（"打分"参考 humanizer-zh 自带的 50 分制，目标 ≥40）
+- 读起来像人话（用 human-writing 的 scripts/check_prose.py 检查，硬禁令清零）
 
-详细规则参见 humanizer-zh skill 的 SKILL.md（路径：`humanizer-zh skill`，已安装）。
+详细规则参见 human-writing skill 的 SKILL.md（路径：`~/.codex/skills/human-writing/SKILL.md`，已安装）。
 
-**优先路径**：直接触发 humanizer-zh skill 对 8 个答题字段逐个/合并重写。
+**优先路径**：直接触发 human-writing skill 对 8 个答题字段逐个/合并重写。
 
 **降级触发条件**（仅以下情况走降级）：
 - skill 调用报错 / 输出为空 / 输出未包含任何改写
@@ -200,9 +200,9 @@ pip install python-docx
 6. **重写万能收束**：搜索"总之，"→ 改为"说到底""核心在于"或直接用具体行动收尾
 
 **降级自检**：写完读一遍，读起来像"考场口述"而非"AI 生成文"——能过即可继续。
-**降级标注**：在 pending_answer.json 同目录写一个 `humanizer_fallback.txt`，内容"humanizer-zh unavailable, used inline rules"，让后续审阅者知道走的是降级路径。
+**降级标注**：在 pending_answer.json 同目录写一个 `human-writing_fallback.txt`，内容"human-writing unavailable, used inline rules"，让后续审阅者知道走的是降级路径。
 
-**🔴 CHECKPOINT · STOP**：去AI味儿确认 → 把 humanize 前后对比的关键改写点展示给用户（3-5 处即可），用 `AskUserQuestion` 弹窗选项让用户确认（选项如："够自然，继续"、"还是像AI，再调"），**不要让用户打字**。用户选"还是像AI"→ 重跑 humanizer-zh 或手动调整。
+**🔴 CHECKPOINT · STOP**：去AI味儿确认 → 把 humanize 前后对比的关键改写点展示给用户（3-5 处即可），用 `AskUserQuestion` 弹窗选项让用户确认（选项如："够自然，继续"、"还是像AI，再调"），**不要让用户打字**。用户选"还是像AI"→ 重跑 human-writing 或手动调整。
 
 ### 步骤 3：写 pending_answer.json
 
@@ -264,7 +264,7 @@ python scripts/fill_structured_post.py
    <项目根>/desktop-attachments/1 结构化每日一练-帖子内容编辑模板.docx
    ```
 4. 验证通过项：段数 17 / 5 张图保留 / 引流段样式保留 / 文本框 2 个镜像同步 / 段[7] pageBreakBefore
-5. **去 AI 味儿自评**（humanizer-zh 5 维 × 10 分制）：直接性 / 节奏 / 信任度 / 真实性 / 精炼度，各项得分 + 总分
+5. **去 AI 味儿自评**（human-writing 硬禁令 + 读感）：冒号/破折号/翻案句/黑话/路标清零，读起来像人话
 
 ### 步骤 6：上传 IMA 笔记
 
@@ -344,7 +344,7 @@ node <skill目录>/scripts/upload_to_ima.js "<临时md文件路径>" "<笔记标
 □ 段[7] 有 pageBreakBefore
 □ 旧题关键词零残留
 □ 新题关键词全命中
-□ 去 AI 味儿标记：检查 pending_answer.json 同目录下无 humanizer_fallback.txt（有=走了降级，无=走了skill）
+□ 去 AI 味儿标记：检查 pending_answer.json 同目录下无 human-writing_fallback.txt（有=走了降级，无=走了skill）
 □ IMA 笔记已上传（note_id 已记录在报告中）
 □ IMA 知识库已同步（笔记已关联到"总分总"知识库的"00_结构化每日一练"文件夹）
 ```

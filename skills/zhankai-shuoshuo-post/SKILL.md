@@ -90,15 +90,15 @@ pip install python-docx
 # 验证：python -c "import docx; print(docx.__version__)"  → 1.2.0
 ```
 
-### ④ humanizer-zh 技能核实
+### ④ human-writing 技能核实
 
 ```bash
-ls ~/.codex/skills/humanizer-zh/SKILL.md \
-  && echo "✅ humanizer-zh 已安装" \
-  || echo "❌ 缺 humanizer-zh，先安装再开工"
+ls ~/.codex/skills/human-writing/SKILL.md \
+  && echo "✅ human-writing 已安装" \
+  || echo "❌ 缺 human-writing，先安装再开工"
 ```
 
-> 若本机 humanizer-zh 在其他目录（如 `~/.trae-cn/skills/humanizer-zh`），以实际存在路径为准；步骤 2.5 中的 `<humanizer-zh 目录>` 即指该路径。
+> 若本机 human-writing 在其他目录（如 `~/.trae-cn/skills/human-writing`），以实际存在路径为准；步骤 2.5 中的 `<human-writing 目录>` 即指该路径。
 
 ## 模板位置（铁律）
 
@@ -219,7 +219,7 @@ for child in body.iterchildren():
 
 **⚠️ 骨架算法已修正**：本号用的是**"3 层 30/40/30"骨架**（**不是 4 步法 30/45/60/20**）。**别再用 4 步法**。
 
-> **弹性层数**：第二层/第三层的"3 个倒错/校正"是默认值，实际可 2-4 个。**不要为了凑 3 而硬编**（与 humanizer-zh 原则一致）。不足 3 个时脚本用空段兜底，段位表中的编号自动顺延。
+> **弹性层数**：第二层/第三层的"3 个倒错/校正"是默认值，实际可 2-4 个。**不要为了凑 3 而硬编**（与 human-writing 原则一致）。不足 3 个时脚本用空段兜底，段位表中的编号自动顺延。
 
 **3 层 30/40/30 + 5 段增值 完整段位表（v5：48 段）**：
 
@@ -282,9 +282,9 @@ for child in body.iterchildren():
 
 > **对比卡模式**（步骤 1.5 选了对比卡模式时）：段位表和 JSON 字段完全不变，只改变内容编排方式。第二层"3 个倒错"->"3 个低分答法"，第三层"3 个校正"->"3 个高分答法"。详细编排规则见 `references/content-strategy.md` 的"对比卡模式"章节。**不适用**：综合分析/哲理启示类（需深度机制分析，非答法对错问题）。
 
-### 步骤 2.5：过 humanizer-zh 祛 AI 味儿（**必跑**）
+### 步骤 2.5：过 human-writing 祛 AI 味儿（**必跑**）
 
-**所有 JSON 字段值生成后、写盘前**，必须按 `<humanizer-zh 目录>/SKILL.md`（本机通常为 `~/.codex/skills/humanizer-zh/SKILL.md`，Pre-flight 会核实）的**全部模式**自查 + 改写（以该文件实际编号为准，当前 20 个）。**自查清单**（5 条最常见的，**这 5 条没过关就不要写 JSON**）：
+**所有 JSON 字段值生成后、写盘前**，必须按 human-writing 的 SKILL.md 与 `references/revision.md` 的规则自查 + 改写（Pre-flight 会核实安装路径）。**自查清单**（5 条最常见的，**这 5 条没过关就不要写 JSON**）：
 
 - ✓ **是否出现"不仅...而且..."或"这不仅仅是...而是..."**——改直接陈述
 - ✓ **是否三段式凑数**（强行 ❶❷❸ 把 2 件事扩成 3 件）——砍一个或加一个，别凑 3
@@ -521,4 +521,3 @@ node <skill-path>/scripts/upload_to_ima.js "<笔记标题>" "<临时md文件路�
 | 看图片分布 | 搜 `<w:drawing>`，找段内分布 |
 | 备份模板 | `shutil.copy(模板, scripts/_backup_template_展开说说原版.docx)` |
 | 跑前快照 | 脚本自动（`_snapshots_zhankai/snapshot_*.docx`） |
-

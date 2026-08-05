@@ -8,7 +8,7 @@
 | gongkao-interview-question | 为公考面试结构化题库批量生成 Obsidian md 文件 |
 | leader | 把一句话想法拆成 AI agent 能独立跑完的目标任务书 |
 | structured-post-fill | 自动化生成"结构化每日一练"小红书/公众号帖子 docx |
-| humanizer-zh | 去除文本中的 AI 生成痕迹，使文字更自然、更有人味 |
+| human-writing | 通用中文创作与改稿，去除 AI 痕迹、写出更有人味的文字 |
 | ima-skill | 统一的 IMA OpenAPI 技能，支持笔记管理和知识库操作 |
 
 ## 安装
