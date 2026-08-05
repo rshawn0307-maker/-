@@ -139,12 +139,12 @@ def scan_ai_patterns(text):
 
 
 def count_dashes(text):
-    """统计破折号使用情况，返回使用超过1个的段落列表 [(段号, 数量)]"""
+    """统计破折号使用情况，返回含破折号的段落列表 [(段号, 数量)]"""
     paragraphs = [p for p in text.split('\n') if p.strip()]
     overuse = []
     for i, para in enumerate(paragraphs):
         count = para.count('——')
-        if count > 1:
+        if count > 0:
             overuse.append((i + 1, count))
     return overuse
 
@@ -573,9 +573,9 @@ def print_question_report(filename, result):
         print(f"✅ 用语禁忌: 零命中")
 
     if result['dash_overuse']:
-        print(f"⚠️  破折号过度使用:")
+        print(f"⚠️  破折号未清零:")
         for para_num, count in result['dash_overuse']:
-            print(f"   第{para_num}段: {count}个破折号 (建议≤1)")
+            print(f"   第{para_num}段: {count}个破折号 (应清零)")
     else:
         print(f"✅ 破折号: 正常")
 
