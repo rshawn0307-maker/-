@@ -20,7 +20,7 @@
  * 注意：笔记创建或知识库同步失败均不阻断主流程，在 stderr 输出警告即可。
  */
 const fs = require('fs');
-const { imaApi } = require('C:/Users/keira/.trae-cn/skills/ima-skill/ima_api.cjs');
+const { imaApi } = require('../../ima-skill/ima_api.cjs');
 
 async function main() {
   const noteTitle = process.argv[2];

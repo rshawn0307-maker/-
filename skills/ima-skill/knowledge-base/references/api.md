@@ -504,10 +504,10 @@ POST /openapi/wiki/v1/get_media_info
 
 ```bash
 # 有扩展名（自动推断）
-node .claude/skills/ima-skill/knowledge-base/scripts/preflight-check.cjs --file report.pdf
+node <ima-skill 目录>/knowledge-base/scripts/preflight-check.cjs --file report.pdf
 
 # 无扩展名或扩展名不可识别（需传入 content-type）
-node .claude/skills/ima-skill/knowledge-base/scripts/preflight-check.cjs --file downloaded_file --content-type application/pdf
+node <ima-skill 目录>/knowledge-base/scripts/preflight-check.cjs --file downloaded_file --content-type application/pdf
 ```
 
 ---

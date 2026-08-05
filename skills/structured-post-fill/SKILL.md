@@ -44,8 +44,8 @@ install_method: upload
 
 ### ① 项目路径核实
 
-**项目根**（本 skill 的「工作区根」）= `c:\Users\keira\Desktop\AI工作区\01-Projects\自媒体内容库-持续项目\结构化`
-（Obsidian vault `AI工作区` 下；自媒体库已作为长期项目归档于此。下文 `<项目根>` 均指此目录）
+**项目根**（本 skill 的「工作区根」）= `<项目根>\01-Projects\自媒体内容库-持续项目\结构化`
+（Obsidian vault `AI工作区` 下；自媒体库已作为长期项目归档于此。下文 `<项目根>` 均指此目录；`<项目根>` 为占位符，原为旧 Windows 路径 `C:\Users\keira\Desktop\AI工作区`，使用前替换为本机实际路径）
 
 `<项目根>` 下应有 `scripts/fill_structured_post.py` + `desktop-attachments/1 结构化每日一练-帖子内容编辑模板.docx`。
 
@@ -183,9 +183,9 @@ pip install python-docx
 
 **写完 human-writing 版后自检**：
 - 总字数仍在 800-900 之间
-- 读起来像人话（用 human-writing 的 scripts/check_prose.py 检查，硬禁令清零）
+- 读起来像人话（用 human-writing 的 scripts/check_prose.py 检查，同仓库安装时位于 `../human-writing/scripts/check_prose.py`，硬禁令清零）
 
-详细规则参见 human-writing skill 的 SKILL.md（路径：`~/.codex/skills/human-writing/SKILL.md`，已安装）。
+详细规则参见 human-writing skill 的 SKILL.md（同仓库安装时位于 `../human-writing/SKILL.md`；若在其他位置则以实际安装路径为准）。
 
 **优先路径**：直接触发 human-writing skill 对 8 个答题字段逐个/合并重写。
 

@@ -3,6 +3,9 @@
 """
 生成人教版体育试讲备考讲义 Word 文档
 覆盖01~10共10个项目、108个子技术
+
+路径说明：脚本顶部 BASE_DIR / OUTPUT_PATH 使用 <项目根> 占位符
+（原为旧 Windows 机器的 C:/Users/keira/... 路径），运行前请替换为本机实际路径。
 """
 
 import os
@@ -16,8 +19,8 @@ from docx.oxml.ns import qn, nsdecls
 from docx.oxml import parse_xml
 
 # === Configuration ===
-BASE_DIR = r"c:\Users\keira\Desktop\AI工作区\01-Projects\试讲稿项目-进行中\人教版"
-OUTPUT_PATH = r"c:\Users\keira\Desktop\AI工作区\01-Projects\试讲稿项目-进行中\人教版体育试讲备考讲义_v1.0.docx"
+BASE_DIR = r"<项目根>\01-Projects\试讲稿项目-进行中\人教版"
+OUTPUT_PATH = r"<项目根>\01-Projects\试讲稿项目-进行中\人教版体育试讲备考讲义_v1.0.docx"
 
 PROJECTS = [
     ("01", "篮球",   "01篮球"),

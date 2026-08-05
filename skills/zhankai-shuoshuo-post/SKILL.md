@@ -48,8 +48,8 @@ install_method: upload
 
 ### ① 项目路径核实
 
-**项目根**（本 skill 的「工作区根」）= `c:\Users\keira\Desktop\AI工作区\01-Projects\自媒体内容库-持续项目\结构化`
-（Obsidian vault `AI工作区` 下；自媒体库已作为长期项目归档于此。下文 `<项目根>` 均指此目录）
+**项目根**（本 skill 的「工作区根」）= `<项目根>\01-Projects\自媒体内容库-持续项目\结构化`
+（Obsidian vault `AI工作区` 下；自媒体库已作为长期项目归档于此。下文 `<项目根>` 均指此目录；`<项目根>` 为占位符，原为旧 Windows 路径 `C:\Users\keira\Desktop\AI工作区`，使用前替换为本机实际路径）
 
 `<项目根>` 下应有 `scripts/fill_zhankai_post.py` + `desktop-attachments/2 展开说说-帖子内容编辑模板.docx`。
 
@@ -93,12 +93,12 @@ pip install python-docx
 ### ④ human-writing 技能核实
 
 ```bash
-ls ~/.codex/skills/human-writing/SKILL.md \
+ls ../human-writing/SKILL.md \
   && echo "✅ human-writing 已安装" \
   || echo "❌ 缺 human-writing，先安装再开工"
 ```
 
-> 若本机 human-writing 在其他目录（如 `~/.trae-cn/skills/human-writing`），以实际存在路径为准；步骤 2.5 中的 `<human-writing 目录>` 即指该路径。
+> 若本机 human-writing 不在同级的 skills 目录（例如未与 zhankai-shuoshuo-post 一起安装），以实际安装路径为准；步骤 2.5 中的 `<human-writing 目录>` 即指该路径。
 
 ## 模板位置（铁律）
 

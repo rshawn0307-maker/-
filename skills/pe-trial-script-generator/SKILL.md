@@ -542,7 +542,7 @@ Phase 1: 项目初始化 → Phase 2: 子技术识别 → Phase 3: 并行生产 
 
 ### 6.6 生成脚本
 
-讲义生成脚本保存为 `.trae/skills/pe-trial-script-generator/generate_lecture.py`，使用时需修改脚本顶部的 `BASE_DIR` 和 `OUTPUT_PATH` 配置。
+讲义生成脚本保存为 `./generate_lecture.py`（与本 SKILL.md 同目录），使用时需修改脚本顶部的 `BASE_DIR` 和 `OUTPUT_PATH` 配置。
 
 脚本核心流程：
 
@@ -627,7 +627,7 @@ Phase 1: 项目初始化 → Phase 2: 子技术识别 → Phase 3: 并行生产 
 │   └── 进度_01_篮球.md
 ├── 02排球/
 │   └── ...
-└── .trae/skills/pe-trial-script-generator/
+└── skills/pe-trial-script-generator/
     ├── SKILL.md
     └── generate_lecture.py              ← Phase 6 脚本
 ```
