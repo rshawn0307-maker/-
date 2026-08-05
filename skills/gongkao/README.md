@@ -1,4 +1,4 @@
-# gongkao-interview-question
+# gongkao
 
 > Skill：公考面试结构化讲义全产品工具
 
@@ -21,7 +21,7 @@
 ## 目录结构
 
 ```
-gongkao-interview-question/
+gongkao/
 ├── SKILL.md                          # skill 定义文件（核心：调度表 + 流程步骤 + 共享标准）
 ├── README.md                         # 本文件
 ├── references/                       # 工作流 B-F 详细输出模板
@@ -39,17 +39,14 @@ gongkao-interview-question/
 
 ## 安装方式
 
-### 方法一：从 zip 安装
-
-1. 下载 `gongkao-interview-question.zip`
-2. 解压到 skills 目录（确保目录名即为 `gongkao-interview-question`）
-3. 即可通过触发词调用
-
-### 方法二：从 GitHub 安装
+本 skill 已并入 [rshawn-skills](https://github.com/rshawn0307-maker/rshawn-skills) 合集仓库：
 
 ```bash
-git clone https://github.com/rshawn0307-maker/gongkao-interview-question.git
+git clone https://github.com/rshawn0307-maker/rshawn-skills.git
+# 将 skills/gongkao/ 目录复制到你的 skills 目录即可
 ```
+
+旧仓库 `gongkao-interview-question` 保留仅供旧链接访问。
 
 ---
 

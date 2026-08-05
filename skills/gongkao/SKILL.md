@@ -1,5 +1,5 @@
 ---
-name: gongkao-interview-question
+name: gongkao
 description: |
   公考面试结构化讲义全产品工具。覆盖题目生成、方法论提炼、框架模板、过渡句库、素材库、讲义组装6个工作流，
   支持从单题生成到完整讲义产品的全生命周期。每道题含 frontmatter 元信息 + 题干 + 思路大纲 + 800-1000字逐字稿，

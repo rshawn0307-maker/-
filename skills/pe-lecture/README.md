@@ -1,4 +1,4 @@
-﻿# pe-exam-analogy-lecture
+﻿# pe-lecture
 
 > 教师编笔试"举一反三"讲稿成体系生成与反例沉淀。体育学科向。
 
@@ -12,16 +12,16 @@
 
 ```bash
 git clone https://github.com/rshawn0307-maker/rshawn-skills.git
-# 将 skills/pe-exam-analogy-lecture/ 目录复制到你的 skills 目录即可
+# 将 skills/pe-lecture/ 目录复制到你的 skills 目录即可
 ```
 
 ### 手动安装
 
-1. 从 rshawn-skills 仓库下载 `skills/pe-exam-analogy-lecture/` 文件夹
+1. 从 rshawn-skills 仓库下载 `skills/pe-lecture/` 文件夹
 2. 放入你的 skills 目录：
-   - Claude Code: `~/.claude/skills/pe-exam-analogy-lecture/`
-   - Cursor: `~/.cursor/skills/pe-exam-analogy-lecture/`
-   - Codex: `~/.codex/skills/pe-exam-analogy-lecture/`
+   - Claude Code: `~/.claude/skills/pe-lecture/`
+   - Cursor: `~/.cursor/skills/pe-lecture/`
+   - Codex: `~/.codex/skills/pe-lecture/`
    - 其他 runtime: 参考对应 runtime 的 skills 目录
 3. 确保 `SKILL.md` 在文件夹根目录
 
@@ -33,7 +33,7 @@ git clone https://github.com/rshawn0307-maker/rshawn-skills.git
 ## 结构
 
 ```
-pe-exam-analogy-lecture/
+pe-lecture/
 ├── SKILL.md                          <- 主流程（含 R1-R18 反例 + 批量产出 SOP）
 ├── references/                       <- 10 个配套 .md
 │   ├── PPT抽取+workbuddy_venv实战_v1.md

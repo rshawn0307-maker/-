@@ -1,5 +1,5 @@
 ---
-name: structured-post-fill
+name: structured-post
 description: 自动化生成"结构化每日一练"小红书/公众号帖子 docx。基于固定 docx 模板 + python-docx 脚本，自动替换题目文本框、正文段落、分页符，并保留配图/引流段样式。出题 + 答题 + 套版式一气呵成，答题须经 human-writing 去 AI 味儿。触发词：答一道、出题、做一篇结构化帖子、每日一练。
 author: Shawn × AI（2026-06 沉淀）
 version: 1.3.1

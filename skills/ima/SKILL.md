@@ -1,5 +1,5 @@
 ---
-name: ima-skill
+name: ima
 description: |
   统一的 IMA OpenAPI 技能，支持笔记管理和知识库操作。
   当用户提到知识库、资料库、笔记、备忘录、记事，或者想要上传文件、添加网页到知识库、
@@ -29,7 +29,7 @@ metadata:
       - '*.myqcloud.com'
 ---
 
-# ima-skill
+# ima
 
 Unified IMA OpenAPI skill. Currently supports: **notes**, **knowledge-base**.
 

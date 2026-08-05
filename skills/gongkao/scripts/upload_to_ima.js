@@ -15,7 +15,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { imaApi } = require(path.join(__dirname, '..', '..', 'ima-skill', 'ima_api.cjs'));
+const { imaApi } = require(path.join(__dirname, '..', '..', 'ima', 'ima_api.cjs'));
 
 async function main() {
   const mdPath = process.argv[2];

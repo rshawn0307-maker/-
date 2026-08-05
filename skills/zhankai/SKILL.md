@@ -1,5 +1,5 @@
 ---
-name: zhankai-shuoshuo-post
+name: zhankai
 description: |
   自动化生成"考官想听的·展开说说"系列小红书长帖 docx。
   站在**公务员结构化面试考官视角**剖析答题思路，输出**有观点、有逻辑、有表达、有深度、可操作、接地气**的高分答题视角，
@@ -98,7 +98,7 @@ ls ../human-writing/SKILL.md \
   || echo "❌ 缺 human-writing，先安装再开工"
 ```
 
-> 若本机 human-writing 不在同级的 skills 目录（例如未与 zhankai-shuoshuo-post 一起安装），以实际安装路径为准；步骤 2.5 中的 `<human-writing 目录>` 即指该路径。
+> 若本机 human-writing 不在同级的 skills 目录（例如未与 zhankai 一起安装），以实际安装路径为准；步骤 2.5 中的 `<human-writing 目录>` 即指该路径。
 
 ## 模板位置（铁律）
 
