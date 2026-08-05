@@ -73,7 +73,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 通用中文创作与改稿 Skill。用于知乎回答、公众号文章、博客、评论、人物故事、历史叙事、教程、评测、小说、口播和演讲稿等，默认写成一个见过事、查过材料、愿意把来龙去脉讲清楚的人在说话，保留中文互联网长文的活人感和自然韵律。成稿正文严禁冒号、破折号、"不是……而是……"及同类翻案句，并清除商业黑话和模型惯用黑话。
 
-> 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
+> 来源：[KKKKhazix/human-writing](https://github.com/KKKKhazix/human-writing)（作者 KKKKhazix）
 
 > 同步：上游更新后可运行 `bash scripts/sync-khazix.sh` 一键拉取最新版（见下方「同步 khazix 来源 skill」）。
 
@@ -117,7 +117,7 @@ macOS / Windows 只读存储分析助手：扫描整机磁盘占用，把占用�
 
 ## 同步 khazix 来源 skill
 
-仓库里的 `neat-freak`、`storage-analyzer`、`leader`、`human-writing` 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)，每个目录内都有 `ORIGIN.md` 注明出处。上游更新后，一条命令即可同步最新版：
+仓库里的 `neat-freak`、`storage-analyzer`、`leader` 收录自 [khazix-skills](https://github.com/KKKKhazix/khazix-skills)，`human-writing` 收录自其独立仓库 [KKKKhazix/human-writing](https://github.com/KKKKhazix/human-writing)。每个目录内都有 `ORIGIN.md` 注明出处。上游更新后，一条命令即可同步最新版：
 
 ```bash
 bash scripts/sync-khazix.sh        # 只更新文件并打印变更
