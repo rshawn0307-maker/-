@@ -55,7 +55,7 @@ def r12_verify_white_list(text: str) -> list:
 
 
 def struct_check(text: str) -> int:
-    """7 大结构宽松正则（兼容'## 模块X'和'## 一、'两种风格）"""
+    """8 大结构宽松正则（兼容'## 模块X'和'## 一、'两种风格）"""
     patterns = [
         r"^## *(?:一|模块一)[、.：:\s]",
         r"^## *(?:二|模块二)[、.：:\s]",
@@ -64,8 +64,22 @@ def struct_check(text: str) -> int:
         r"^## *(?:五|模块五)[、.：:\s]",
         r"^## *(?:六|模块六)[、.：:\s]",
         r"^## *(?:七|模块七)?[、.：:\s]?记忆口诀",
+        r"^##\s*学习导航",
     ]
     return sum(1 for p in patterns if re.search(p, text, re.MULTILINE))
+
+
+def v36_check(text: str) -> dict:
+    """v3.6 新增：修订说明存在性 / 正文授课提示 3-6 处 / 修订说明含 R1 触发词。"""
+    parts = text.split("## 【修订说明】")
+    body = parts[0]
+    xiuding = len(parts) > 1
+    mic = body.count("> 🎤 授课提示")
+    triggers = 0
+    if xiuding:
+        for w in ["讲义原话：", "讲义原文：", "原文：", "讲义："]:
+            triggers += parts[1].count(w)
+    return {"修订说明": xiuding, "授课提示": mic, "修订说明R1": triggers}
 
 
 def banned_check(text: str) -> list:
@@ -100,6 +114,7 @@ def main():
         r = r1_check(text)
         struct = struct_check(text)
         bans = banned_check(text)
+        v36 = v36_check(text)
         # R12 误报豁免：从 R1_原文 中减去 R12_误报候选
         r1_real = r["R1_原文:"] - r["R12_误报候选:"]
         ok = (r["TOTAL"] == 0 and not bans and struct >= 6 and r1_real == 0)
@@ -107,7 +122,7 @@ def main():
             all_ok += 1
         else:
             total_r1 += r["TOTAL"]
-        print(f"  {'✅' if ok else '❌'} {f.name} ({len(text)}字) R1={r['TOTAL']} 结构={struct}/7 红线={len(bans)}")
+        print(f"  {'✅' if ok else '❌'} {f.name} ({len(text)}字) R1={r['TOTAL']} 结构={struct}/8 红线={len(bans)} 修订说明={'✅' if v36['修订说明'] else '—'} 授课提示={v36['授课提示']} 修订说明R1={v36['修订说明R1']}")
         if r["TOTAL"] > 0:
             for k, v in r.items():
                 if v and k != "TOTAL" and k != "R12_误报候选:":
