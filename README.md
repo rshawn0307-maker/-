@@ -19,7 +19,16 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 ### 🌟 社区精选 · 转载
 
-收录自开源社区，说明列均标注来源；其中 khazix 系列另有 `ORIGIN.md` 出处声明与一键同步脚本。
+收录自开源社区，说明列均标注来源；khazix 系列与花叔系列另有 `ORIGIN.md` 出处声明与一键同步脚本。
+
+**花叔系列**（收录自 [alchaincyf](https://github.com/alchaincyf)）
+
+| Skill | 一句话说明 | 讲解 |
+| --- | --- | --- |
+| [darwin-skill](#darwin-skill) | 让所有 Skill 自主进化：9 维评估 + 独立评分 + 棘轮机制（来源：花叔） | [查看](#darwin-skill) |
+| [huashu-design](#huashu-design) | 用 HTML 做高保真原型/PPT/动画/可视化与专家评审（来源：花叔） | [查看](#huashu-design) |
+
+**其他社区精选**
 
 | Skill | 一句话说明 | 讲解 |
 | --- | --- | --- |
@@ -63,6 +72,8 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 > 提示：少数 skill 依赖同仓库的兄弟 skill（例如 structured-post、zhankai 依赖 human-writing，ima-skill 供多个 skill 调用），建议一起安装到同一个 skills 根目录。
 
+> 提示：huashu-design 体积较大（约 30MB，含动画模板、音效与案例资源），请整目录复制，不要只拷 SKILL.md。
+
 ## Skill 详解
 
 ### 🧑‍💻 原创自研
@@ -104,6 +115,28 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 触发词：展开说说、做一篇考官想听的、出一期长帖、跑第 N 期。
 
 ### 🌟 社区精选 · 转载
+
+**花叔系列**
+
+#### darwin-skill
+
+让所有 Skill 自主进化：9 维评分（结构 + 效果 + meta-skill 黑名单）+ 独立 judge agent 盲评 + 棘轮机制（只保留改进、自动回滚退步）+ 人在回路确认，并生成可视化成果卡片。触发词：优化 skill、skill 评分、自动优化、skill 质量检查、达尔文、darwin。
+
+> 来源：[alchaincyf/darwin-skill](https://github.com/alchaincyf/darwin-skill)（作者：花叔 alchaincyf）
+
+> 同步：上游更新后可运行 `bash scripts/sync-huashu.sh` 一键拉取最新版（见下方「同步花叔来源 skill」）。
+
+#### huashu-design
+
+用 HTML 做高保真原型、PPT/幻灯片、动画、信息图与专家评审的「设计师」skill：任何新设计先出三个方向初稿给用户选，再进入标准流程；覆盖事实验证、品牌资产协议、设计方向顾问、App/iOS 原型守则、动画/视频导出等完整链路。触发词：做原型、PPT、幻灯片、动画、设计风格、评审、UI mockup、导出 MP4/GIF。
+
+> 注意：本 skill 体积较大（约 30MB，含动画模板、音效与案例资源），安装时请完整复制整个目录。
+
+> 来源：[alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)（作者：花叔 alchaincyf）
+
+> 同步：上游更新后可运行 `bash scripts/sync-huashu.sh` 一键拉取最新版（见下方「同步花叔来源 skill」）。
+
+**其他社区精选**
 
 #### leader
 
@@ -187,6 +220,17 @@ bash scripts/sync-khazix.sh --push # 更新并自动 commit + push
 脚本会从 khazix-skills 拉取最新代码、覆盖对应 skill 目录，并自动保留/补回 `SKILL.md` 顶部的来源声明和 `ORIGIN.md`。若某个 skill 在上游已改名或删除，脚本会跳过并提示。
 
 `gongkao`、`structured-post`、`zhankai` 三个 skill 的工作流依赖 human-writing，其规则引用一律以 human-writing 最新版为准（不锁版本号）。human-writing 更新后运行同步脚本，脚本会自动校验这三个 skill 的引用与硬禁令要点（冒号/破折号/翻案腔）是否齐全，缺失会明确提示。
+
+## 同步花叔来源 skill
+
+仓库里的 `darwin-skill`、`huashu-design` 收录自花叔（alchaincyf）的两个独立仓库。每个目录内都有 `ORIGIN.md` 注明出处。上游更新后，一条命令即可同步最新版：
+
+```bash
+bash scripts/sync-huashu.sh        # 只更新文件并打印变更
+bash scripts/sync-huashu.sh --push # 更新并自动 commit + push
+```
+
+脚本会从上游仓库拉取最新代码、覆盖对应 skill 目录，并自动保留/补回 `SKILL.md` 顶部的来源声明和 `ORIGIN.md`。若某个 skill 在上游已改名或删除，脚本会跳过并提示。注意 huashu-design 包含约 30MB 设计资源（动画模板、音效、案例图），同步时会整体覆盖。
 
 ## 许可
 
