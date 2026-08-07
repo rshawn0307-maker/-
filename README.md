@@ -19,7 +19,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 ### 🌟 社区精选 · 转载
 
-收录自开源社区，说明列均标注来源；khazix 系列与花叔系列另有 `ORIGIN.md` 出处声明与一键同步脚本。
+收录自开源社区，说明列均标注来源；每个目录内都有 `ORIGIN.md` 出处声明，khazix / 花叔 / dashi 系列另有对应的一键同步脚本。
 
 **花叔系列**（收录自 [alchaincyf](https://github.com/alchaincyf)）
 
@@ -32,6 +32,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 | Skill | 一句话说明 | 讲解 |
 | --- | --- | --- |
+| [dashi-ppt](#dashi-ppt) | 生成可浏览器编辑的 HTML 演示，支持导出 PPTX / PDF（来源：chuspeeism） | [查看](#dashi-ppt) |
 | [leader](#leader) | 把一句话想法拆成 AI agent 能独立跑完的目标任务书（来源：khazix） | [查看](#leader) |
 | [neat-freak](#neat-freak) | 项目知识收尾：让文档、规则、记忆与代码现状一致（来源：khazix） | [查看](#neat-freak) |
 | [human-writing](#human-writing) | 通用中文创作与改稿，去 AI 味儿（来源：khazix） | [查看](#human-writing) |
@@ -138,6 +139,16 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 **其他社区精选**
 
+#### dashi-ppt
+
+基于预置视觉主题生成可离线打开、可在浏览器编辑的 HTML 演示，支持导出 PPTX / PDF。使用前先把需求整理成 JSON 计划，再调用内置生成器产出 `index.html` 和 `assets/`。触发词：做 PPT、演示文稿、幻灯片、汇报材料。
+
+> 注意：需要 Node.js 20+ 和 npm，首次生成时会在 skill 内置 `project/` 目录安装依赖；上游采用 AGPL-3.0 许可。
+
+> 来源：[chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)（作者 chuspeeism）
+
+> 同步：上游更新后可运行 `bash scripts/sync-dashi.sh` 一键拉取最新版（见下方「同步 dashi-ppt 来源 skill」）。
+
 #### leader
 
 把一句话的想法拆成 AI agent 能独立跑完的目标任务书。先进代码库实测、必要时联网调研，再一次性提问（≤5 个），产出一份 ≤4000 字符、直接粘进 /goal 就能跑的任务书，含实测数字、白名单地界、防作弊验收和断点续跑。
@@ -231,6 +242,17 @@ bash scripts/sync-huashu.sh --push # 更新并自动 commit + push
 ```
 
 脚本会从上游仓库拉取最新代码、覆盖对应 skill 目录，并自动保留/补回 `SKILL.md` 顶部的来源声明和 `ORIGIN.md`。若某个 skill 在上游已改名或删除，脚本会跳过并提示。注意 huashu-design 包含约 30MB 设计资源（动画模板、音效、案例图），同步时会整体覆盖。
+
+## 同步 dashi-ppt 来源 skill
+
+仓库里的 `dashi-ppt` 收录自 [chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)。目录内含 `ORIGIN.md` 出处声明与上游 `LICENSE`（AGPL-3.0）。上游更新后，一条命令即可同步最新版：
+
+```bash
+bash scripts/sync-dashi.sh        # 只更新文件并打印变更
+bash scripts/sync-dashi.sh --push # 更新并自动 commit + push
+```
+
+脚本会从上游仓库拉取最新代码、覆盖 skill 目录（并保留 LICENSE），自动补回 `SKILL.md` 顶部的来源声明和 `ORIGIN.md`。若上游目录已改名或删除，脚本会跳过并提示。
 
 ## 许可
 
