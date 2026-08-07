@@ -28,15 +28,20 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 | [darwin-skill](#darwin-skill) | 让所有 Skill 自主进化：9 维评估 + 独立评分 + 棘轮机制（来源：花叔） | [查看](#darwin-skill) |
 | [huashu-design](#huashu-design) | 用 HTML 做高保真原型/PPT/动画/可视化与专家评审（来源：花叔） | [查看](#huashu-design) |
 
+**khazix系列**（收录自 [KKKKhazix](https://github.com/KKKKhazix)）
+
+| Skill | 一句话说明 | 讲解 |
+| --- | --- | --- |
+| [leader](#leader) | 把一句话想法拆成 AI agent 能独立跑完的目标任务书（来源：khazix） | [查看](#leader) |
+| [neat-freak](#neat-freak) | 项目知识收尾：让文档、规则、记忆与代码现状一致（来源：khazix） | [查看](#neat-freak) |
+| [human-writing](#human-writing) | 通用中文创作与改稿，去 AI 味儿（来源：khazix） | [查看](#human-writing) |
+| [storage-analyzer](#storage-analyzer) | macOS / Windows 只读存储分析与交互式清理报告（来源：khazix） | [查看](#storage-analyzer) |
+
 **其他社区精选**
 
 | Skill | 一句话说明 | 讲解 |
 | --- | --- | --- |
 | [dashi-ppt](#dashi-ppt) | 生成可浏览器编辑的 HTML 演示，支持导出 PPTX / PDF（来源：chuspeeism） | [查看](#dashi-ppt) |
-| [leader](#leader) | 把一句话想法拆成 AI agent 能独立跑完的目标任务书（来源：khazix） | [查看](#leader) |
-| [neat-freak](#neat-freak) | 项目知识收尾：让文档、规则、记忆与代码现状一致（来源：khazix） | [查看](#neat-freak) |
-| [human-writing](#human-writing) | 通用中文创作与改稿，去 AI 味儿（来源：khazix） | [查看](#human-writing) |
-| [storage-analyzer](#storage-analyzer) | macOS / Windows 只读存储分析与交互式清理报告（来源：khazix） | [查看](#storage-analyzer) |
 | [docx](#docx) | 专业 Word 文档创建/编辑/修订/批注（来源：appautomaton） | [查看](#docx) |
 | [defuddle](#defuddle) | 网页转干净 Markdown，收藏前先去噪（来源：kepano） | [查看](#defuddle) |
 | [json-canvas](#json-canvas) | 生成和编辑 Obsidian Canvas 画布文件（来源：kepano） | [查看](#json-canvas) |
@@ -137,17 +142,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 > 同步：上游更新后可运行 `bash scripts/sync-huashu.sh` 一键拉取最新版（见下方「同步花叔来源 skill」）。
 
-**其他社区精选**
-
-#### dashi-ppt
-
-基于预置视觉主题生成可离线打开、可在浏览器编辑的 HTML 演示，支持导出 PPTX / PDF。使用前先把需求整理成 JSON 计划，再调用内置生成器产出 `index.html` 和 `assets/`。触发词：做 PPT、演示文稿、幻灯片、汇报材料。
-
-> 注意：需要 Node.js 20+ 和 npm，首次生成时会在 skill 内置 `project/` 目录安装依赖；上游采用 AGPL-3.0 许可。
-
-> 来源：[chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)（作者 chuspeeism）
-
-> 同步：上游更新后可运行 `bash scripts/sync-dashi.sh` 一键拉取最新版（见下方「同步 dashi-ppt 来源 skill」）。
+**khazix系列**
 
 #### leader
 
@@ -182,6 +177,18 @@ macOS / Windows 只读存储分析助手：扫描整机磁盘占用，把占用�
 > 来源：[khazix-skills](https://github.com/KKKKhazix/khazix-skills)（作者 KKKKhazix）
 
 > 同步：上游更新后可运行 `bash scripts/sync-khazix.sh` 一键拉取最新版（见下方「同步 khazix 来源 skill」）。
+
+**其他社区精选**
+
+#### dashi-ppt
+
+基于预置视觉主题生成可离线打开、可在浏览器编辑的 HTML 演示，支持导出 PPTX / PDF。使用前先把需求整理成 JSON 计划，再调用内置生成器产出 `index.html` 和 `assets/`。触发词：做 PPT、演示文稿、幻灯片、汇报材料。
+
+> 注意：需要 Node.js 20+ 和 npm，首次生成时会在 skill 内置 `project/` 目录安装依赖；上游采用 AGPL-3.0 许可。
+
+> 来源：[chuspeeism/dashi-ppt-skill](https://github.com/chuspeeism/dashi-ppt-skill)（作者 chuspeeism）
+
+> 同步：上游更新后可运行 `bash scripts/sync-dashi.sh` 一键拉取最新版（见下方「同步 dashi-ppt 来源 skill」）。
 
 #### docx
 
