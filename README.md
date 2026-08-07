@@ -16,6 +16,15 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 | [storage-analyzer](#storage-analyzer) | macOS / Windows 只读存储分析与交互式清理报告 | [查看](#storage-analyzer) |
 | [structured-post](#structured-post) | "结构化每日一练"帖子 docx 自动生成 | [查看](#structured-post) |
 | [zhankai](#zhankai) | "展开说说"系列小红书长帖 docx 自动生成 | [查看](#zhankai) |
+| [docx](#docx) | 专业 Word 文档创建/编辑/修订/批注（来源：appautomaton） | [查看](#docx) |
+| [defuddle](#defuddle) | 网页转干净 Markdown，收藏前先去噪（来源：kepano） | [查看](#defuddle) |
+| [json-canvas](#json-canvas) | 生成和编辑 Obsidian Canvas 画布文件（来源：kepano） | [查看](#json-canvas) |
+| [obsidian-bases](#obsidian-bases) | 创建编辑 Obsidian Bases 数据库视图（来源：kepano） | [查看](#obsidian-bases) |
+| [obsidian-markdown](#obsidian-markdown) | Obsidian 专有 Markdown 语法规范（来源：kepano） | [查看](#obsidian-markdown) |
+| [quiz](#quiz) | 根据已读资料生成测验题（来源：Readwise） | [查看](#quiz) |
+| [xiaohongshu-images](#xiaohongshu-images) | 生成 3:4 小红书配图（来源：iamzifei） | [查看](#xiaohongshu-images) |
+| [xiaohongshu-note-analyzer](#xiaohongshu-note-analyzer) | 小红书笔记发布前审核与优化（来源：softbread） | [查看](#xiaohongshu-note-analyzer) |
+| [find-skills](#find-skills) | 搜索并安装 Agent Skills，安装规则已按个人要求修改（来源：vercel-labs） | [查看](#find-skills) |
 
 ## 安装（通用方法）
 
