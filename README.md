@@ -4,18 +4,29 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 ## Skill 目录
 
+### 🧑‍💻 原创自研
+
+自己写的工作流与工具，按需修改、随取随用。
+
 | Skill | 一句话说明 | 讲解 |
 | --- | --- | --- |
 | [gongkao](#gongkao) | 公考面试结构化讲义全产品工具（6 个工作流） | [查看](#gongkao) |
-| [leader](#leader) | 把一句话想法拆成 AI agent 能独立跑完的目标任务书 | [查看](#leader) |
-| [neat-freak](#neat-freak) | 项目知识收尾：让文档、规则、记忆与代码现状一致 | [查看](#neat-freak) |
-| [human-writing](#human-writing) | 通用中文创作与改稿，去 AI 味儿 | [查看](#human-writing) |
 | [ima-skill](#ima-skill) | 统一的 IMA 笔记与知识库操作技能 | [查看](#ima-skill) |
 | [pe-lecture](#pe-lecture) | 教师编笔试"举一反三"讲稿生成与反例沉淀 | [查看](#pe-lecture) |
 | [pe-trial](#pe-trial) | 体育试讲稿教学产物全流程生成 | [查看](#pe-trial) |
-| [storage-analyzer](#storage-analyzer) | macOS / Windows 只读存储分析与交互式清理报告 | [查看](#storage-analyzer) |
 | [structured-post](#structured-post) | "结构化每日一练"帖子 docx 自动生成 | [查看](#structured-post) |
 | [zhankai](#zhankai) | "展开说说"系列小红书长帖 docx 自动生成 | [查看](#zhankai) |
+
+### 🌟 社区精选 · 转载
+
+收录自开源社区，说明列均标注来源；其中 khazix 系列另有 `ORIGIN.md` 出处声明与一键同步脚本。
+
+| Skill | 一句话说明 | 讲解 |
+| --- | --- | --- |
+| [leader](#leader) | 把一句话想法拆成 AI agent 能独立跑完的目标任务书（来源：khazix） | [查看](#leader) |
+| [neat-freak](#neat-freak) | 项目知识收尾：让文档、规则、记忆与代码现状一致（来源：khazix） | [查看](#neat-freak) |
+| [human-writing](#human-writing) | 通用中文创作与改稿，去 AI 味儿（来源：khazix） | [查看](#human-writing) |
+| [storage-analyzer](#storage-analyzer) | macOS / Windows 只读存储分析与交互式清理报告（来源：khazix） | [查看](#storage-analyzer) |
 | [docx](#docx) | 专业 Word 文档创建/编辑/修订/批注（来源：appautomaton） | [查看](#docx) |
 | [defuddle](#defuddle) | 网页转干净 Markdown，收藏前先去噪（来源：kepano） | [查看](#defuddle) |
 | [json-canvas](#json-canvas) | 生成和编辑 Obsidian Canvas 画布文件（来源：kepano） | [查看](#json-canvas) |
