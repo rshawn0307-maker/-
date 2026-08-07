@@ -110,7 +110,7 @@ Shawn 的个人 AI Agent Skill 合集，遵循 Agent Skills 开放标准。每�
 
 #### structured-post
 
-自动化生成"结构化每日一练"小红书/公众号帖子 docx。基于固定 docx 模板 + python-docx 脚本，自动替换题目文本框、正文段落、分页符并保留配图/引流段样式，答题须经 human-writing 去 AI 味儿。
+自动化生成"结构化每日一练"小红书/公众号帖子 docx。基于固定 docx 模板 + python-docx 脚本，自动替换题目文本框、正文段落、分页符并保留配图/引流段样式，答题须经 human-writing 去 AI 味儿（v1.3.2：新增 Pre-flight 三项检查、分题型高分要素、用语禁忌与 IMA 笔记上传）。
 
 触发词：答一道、出题、做一篇结构化帖子、每日一练。
 
