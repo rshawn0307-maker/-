@@ -45,9 +45,11 @@ pe-lecture/
 │   ├── 老板参考版版式_v1.md
 │   ├── 老板项目真路径_v1.md
 │   ├── 输出格式样板_v1.md
-│   └── 运动技术全套生成实战_v1.md
+│   ├── 运动技术全套生成实战_v1.md
+│   └── md转Word提示词_v1.md          <- 通用 md->Word 提示词（v3.8 替代脚本）
 └── scripts/
-    ├── merge_md_to_docx_v1.py        <- N 篇 md -> 单 docx 合并脚本
+    ├── merge_md_to_docx_v1.py        <- 【已删除】旧合并脚本（v3.8 起不用）
+    ├── merge_md_to_docx_讲义库_v1.py  <- 【已删除】旧 docx 汇编脚本（v3.8 起不用）
     └── r1_self_check.py              <- R1-R6 反例自查脚本
 ```
 
